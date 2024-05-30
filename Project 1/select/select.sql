@@ -44,3 +44,40 @@ SELECT TOP (1000) [EmployeeKey]
 	  ELSE 'Vacation Hours within Limit'
 	  END AS VacationHoursStatus
 FROM [AdventureWorksDW2019].[dbo].[DimEmployee];
+-- Where Clause --
+SELECT TOP (1000) [EmployeeKey]
+      ,[ParentEmployeeKey]
+      ,[EmployeeNationalIDAlternateKey]
+      ,[ParentEmployeeNationalIDAlternateKey]
+      ,[SalesTerritoryKey]
+      ,[FirstName]
+      ,[LastName]
+      ,[MiddleName]
+      ,[NameStyle]
+      ,[Title]
+      ,[HireDate]
+      ,[BirthDate]
+      ,[LoginID]
+      ,[EmailAddress]
+      ,[Phone]
+      ,[MaritalStatus]
+      ,[EmergencyContactName]
+      ,[EmergencyContactPhone]
+      ,[SalariedFlag]
+      ,[Gender]
+      ,[PayFrequency]
+      ,[BaseRate]
+      ,[VacationHours]
+      ,[SickLeaveHours]
+      ,[CurrentFlag]
+      ,[SalesPersonFlag]
+      ,[DepartmentName]
+      ,[StartDate]
+      ,[EndDate]
+      ,[Status]
+      ,[EmployeePhoto]
+
+	 
+FROM [AdventureWorksDW2019].[dbo].[DimEmployee]
+WHERE MaritalStatus = 'S'
+AND  BirthDate > '1985-01-20';
