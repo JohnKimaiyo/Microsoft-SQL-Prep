@@ -39,6 +39,8 @@ SELECT TOP (1000) [EmployeeKey]
 	  CASE
 
 	  WHEN VacationHours > 70 THEN 'Vacation hours ove rlimit' 
+	  
+	  WHEN VacationHours BETWEEN 40 AND  70 THEN 'Average hours ' 
 	  ELSE 'Vacation Hours within Limit'
-	  END AS VacatioHourLimit
-  FROM [AdventureWorksDW2019].[dbo].[DimEmployee]
+	  END AS VacationHoursStatus
+FROM [AdventureWorksDW2019].[dbo].[DimEmployee];
